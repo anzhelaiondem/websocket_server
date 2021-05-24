@@ -1,0 +1,7 @@
+# Required Python packages
+# Use with pip install -r requirements.txt
+websockets
+pyephem
+logging
+asyncio
+ngrok
