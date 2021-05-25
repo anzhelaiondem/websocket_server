@@ -10,20 +10,20 @@ ephem (pip install pyephem)\
 ngrok from pyngrok (pip install pyngrok)
 
 ### Steps to follow
-1 Before running server.py module, run requirements.txt by writing "pip install -r requirements.txt" to install websockets, pyngrok and pyephem packages.\
-2 When running server.py, it returns _"Ngrok tunnel address: ws://ngrok.address"_ as an output.\
-3 Copy the websocket address and past it into the "WebSocket Test Client" extension:\
+1. Before running server.py module, run requirements.txt by writing "pip install -r requirements.txt" to install websockets, pyngrok and pyephem packages.\
+2. When running server.py, it returns _"Ngrok tunnel address: ws://ngrok.address"_ as an output.\
+3. Copy the websocket address and past it into the "WebSocket Test Client" extension:\
   . If you have already added the WebSocket Test Client extension into Chrom, then use this link:\
   chrome-extension://fgponpodhbmadfljofbimhhlengambbn/index.html \
   . If you have not added it into chrome, open this link to add:\
   https://chrome.google.com/webstore/detail/websocket-test-client/fgponpodhbmadfljofbimhhlengambbn/related?hl=en \
   then use the link mentioned above to use it.\
 The picture should look like this:\
-<img width="400" alt="image" src="https://user-images.githubusercontent.com/82014669/119537994-b047ad00-bd9b-11eb-8307-47b98a7a7172.png">
+<img width="600" alt="image" src="https://user-images.githubusercontent.com/82014669/119537994-b047ad00-bd9b-11eb-8307-47b98a7a7172.png">
  
-4 After pressing "Open", the program will start providing the RA and DEC of the Moon every 10 seconds.\
+4. After pressing "Open", the program will start providing the RA and DEC of the Moon every 10 seconds.\
 The final picture should look like this:\
-<img width="400" alt="https://user-images.githubusercontent.com/82014669/119538613-572c4900-bd9c-11eb-9c00-52d0466dd726.png">
+<img width="600" alt="image" src="https://user-images.githubusercontent.com/82014669/119538613-572c4900-bd9c-11eb-9c00-52d0466dd726.png">
  
 ### Information about the program
 _client.log file_ After running, the program creates client.log file where first 17 rows show the ngrok tunnel creation process, starting from the row 18 we get flow of the connected and/or disconnected clients.
