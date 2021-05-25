@@ -26,9 +26,9 @@ The final picture should look like this:
 <img width="600" alt="image" src="https://user-images.githubusercontent.com/82014669/119538613-572c4900-bd9c-11eb-9c00-52d0466dd726.png">
  
 ### Information about the program
-_client.log file_ After running, the program creates client.log file where first 17 rows show the ngrok tunnel creation process, starting from the row 18 we get flow of the connected and/or disconnected clients.\
-_message from a client_ For any message sent from a client the response is "You are connected. Close the program to disconnect."\
-_stop the server_ After running the websocket server, it can be stopped by closing the program. 
+_Client.log file:_ After running, the program creates client.log file where first 17 rows show the ngrok tunnel creation process, starting from the row 18 we get flow of the connected and/or disconnected clients.\
+_Message from a client:_ For any message sent from a client the response is "You are connected. Close the program to disconnect."\
+_Stop the server:_ After running the websocket server, it can be stopped by closing the program. 
 
 
 ### Additional information
