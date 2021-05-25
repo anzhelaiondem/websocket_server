@@ -25,10 +25,14 @@ The final picture should look like this:
 
  
 ### Information about the program
-_First_run:_ When running the program first time, it will automatically install pyngrok.\
+_First run:_ When running the program first time, it will automatically install pyngrok.\
+
 _Client.log file:_ After running, the program creates client.log file where first 17 rows show the ngrok tunnel creation process, starting from the row 18 we get flow of the connected and/or disconnected clients.\
-_Information in terminal:_ The flow of the connected and/or disconnected clients is being printed in terminal too. 
+
+_Information displayed in terminal:_ The flow of the connected and/or disconnected clients is being printed in terminal too.\ 
+
 _Message from a client:_ For any message sent from a client the response is "You are connected. Close the program to disconnect."\
+
 _Stop the server:_ After running the websocket server, it can be stopped by closing the program. 
 
 
