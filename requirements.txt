@@ -1,7 +1,5 @@
 # Required Python packages
 # Use with pip install -r requirements.txt
-websockets
-pyephem
-logging
-asyncio
-ngrok
+websockets==9.0.2
+ephem==3.7.7.1
+pyngrok==5.0.5

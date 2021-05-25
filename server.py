@@ -13,7 +13,16 @@ logging.basicConfig(filename='client.log', filemode='w', level=logging.INFO, dat
                     format=' %(levelname)-8s %(asctime)s - %(message)s')
 
 
-async def handler(websocket, path):
+async def client_handler(websocket, path):
+    try:
+        while True:
+            if await websocket.recv():
+                await websocket.send("You are connected. Close the program to disconnect.")
+    except (websockets.ConnectionClosedError, websockets.ConnectionClosedOK):
+        pass
+
+
+async def producer_handler(websocket, path):
     USERS.add(websocket.remote_address[:2])
     print(f"Client {websocket.remote_address[:2]} is connected. Active clients number: {len(USERS)}")
     logging.info(f"Client {websocket.remote_address[:2]} is connected. Active clients number: {len(USERS)}")
@@ -26,6 +35,17 @@ async def handler(websocket, path):
         print(f"Client {websocket.remote_address[:2]} is disconnected. Active clients number: {len(USERS) - 1}")
         logging.info(f"Client {websocket.remote_address[:2]} is disconnected. Active clients number: {len(USERS) - 1}")
         USERS.remove(websocket.remote_address[:2])
+
+
+async def handler(websocket, path):
+    try:
+        request_task = asyncio.ensure_future(client_handler(websocket, path))
+        sender_task = asyncio.ensure_future(producer_handler(websocket, path))
+        done, pending = await asyncio.wait([request_task, sender_task], return_when=asyncio.ALL_COMPLETED, )
+        for task in pending:
+            task.cancel()
+    except (websockets.ConnectionClosedError, websockets.ConnectionClosedOK):
+        pass
 
 
 async def calculating_ra_dec_of_moon():
