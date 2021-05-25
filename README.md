@@ -10,9 +10,9 @@ ephem (pip install pyephem)\
 ngrok from pyngrok (pip install pyngrok)
 
 ### Steps to follow
-1. Before running server.py module, run requirements.txt by writing "pip install -r requirements.txt" to install websockets, pyngrok and pyephem packages.\
+1. Before running server.py module, run requirements.txt by writing "pip install -r requirements.txt" to install websockets, pyngrok and pyephem packages.
 2. When running server.py, it returns _"Ngrok tunnel address: ws://ngrok.address"_ as an output.
-3. Copy the websocket address and past it into the "WebSocket Test Client" extension:
+3. Copy the websocket address and past it into the "WebSocket Test Client" extension:\
   . If you have already added the WebSocket Test Client extension into Chrom, then use this link:\
   chrome-extension://fgponpodhbmadfljofbimhhlengambbn/index.html \
   . If you have not added it into chrome, open this link to add:\
