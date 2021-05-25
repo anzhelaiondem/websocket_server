@@ -19,11 +19,11 @@ ngrok from pyngrok (pip install pyngrok)
   https://chrome.google.com/webstore/detail/websocket-test-client/fgponpodhbmadfljofbimhhlengambbn/related?hl=en \
   then use the link mentioned above to use it.\
 The picture should look like this:\
-   { width=30% height=30% }![image](https://user-images.githubusercontent.com/82014669/119537994-b047ad00-bd9b-11eb-8307-47b98a7a7172.png)\
+![image](https://user-images.githubusercontent.com/82014669/119537994-b047ad00-bd9b-11eb-8307-47b98a7a7172.png){:height="50%" width="50%"}
  
 4 After pressing "Open", the program will start providing the RA and DEC of the Moon every 10 seconds.\
 The final picture should look like this:\
-  { width=30% height=30% }![image](https://user-images.githubusercontent.com/82014669/119538613-572c4900-bd9c-11eb-9c00-52d0466dd726.png)\
+![image](https://user-images.githubusercontent.com/82014669/119538613-572c4900-bd9c-11eb-9c00-52d0466dd726.png){:height="50%" width="50%"}
  
 ### Information about the program
 _client.log file_ After running, the program creates client.log file where first 17 rows show the ngrok tunnel creation process, starting from the row 18 we get flow of the connected and/or disconnected clients.
