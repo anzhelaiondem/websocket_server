@@ -2,10 +2,8 @@
 ## Summary
 This program creates a publicly available websocket server that sends to connected clients, particularly to "WebSocket Test Client" extension, the right ascension (RA) and declination (DEC) of the Moon every 10 seconds.
 
-### Required packages
+### Required packages in addition to virtual environment (venv)
 websockets (pip install websockets)\
-asyncio\
-logging\
 ephem (pip install pyephem)\
 ngrok from pyngrok (pip install pyngrok)
 
@@ -23,10 +21,13 @@ The picture should look like this:
  
 4. After pressing "Open", the program will start providing the RA and DEC of the Moon every 10 seconds.\
 The final picture should look like this:
-<img width="600" alt="image" src="https://user-images.githubusercontent.com/82014669/119538613-572c4900-bd9c-11eb-9c00-52d0466dd726.png">
+<img width="600" alt="image" src="https://user-images.githubusercontent.com/82014669/119551541-cd37ac80-bdaa-11eb-9f86-f1d0124ea43f.png">
+
  
 ### Information about the program
+_First_run:_ When running the program first time, it will automatically install pyngrok.\
 _Client.log file:_ After running, the program creates client.log file where first 17 rows show the ngrok tunnel creation process, starting from the row 18 we get flow of the connected and/or disconnected clients.\
+_Information in terminal:_ The flow of the connected and/or disconnected clients is being printed in terminal too. 
 _Message from a client:_ For any message sent from a client the response is "You are connected. Close the program to disconnect."\
 _Stop the server:_ After running the websocket server, it can be stopped by closing the program. 
 
